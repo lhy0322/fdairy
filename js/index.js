@@ -76,6 +76,9 @@ $("#denglu").click(function(){
 //     });
 // });
 $(function(){
+   
+    var userEmail = sessionStorage.getItem("email");
+    console.log(userEmail);
 
     // 登录的表单
     $("#loginForm").validate({
@@ -97,7 +100,10 @@ $(function(){
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
-                    console.log(data)
+                    console.log(data);
+
+                    sessionStorage.setItem("email",oEmail);
+
                     if(data){
                         alert("登陆成功");
                         $("#name-name").html(oEmail);
@@ -109,7 +115,7 @@ $(function(){
                         
                         $("#name").css("display","block");
                         $("#goin1").css("display","none");
-                        
+
                         $("#mis").css("display","none");
                     }else {
                         $("#mis").css("display","block");
