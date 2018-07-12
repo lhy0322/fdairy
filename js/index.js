@@ -122,6 +122,7 @@ $(function(){
 
                     if(data){
                         $("#mis").css("display","none");
+                        alert("登陆成功！")
                         $("#name-name").html(oEmail);
                         $('#myModal').modal('hide')
 
@@ -223,9 +224,10 @@ $(function(){
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+                    console.log(data)
                     if(data){
                         $("#misYan").css("display","none");
-                    
+                        alert("注册成功！")
                         $(".ok").hide();
                         $("input").val("");
                         $("label.error").css("display","none");
