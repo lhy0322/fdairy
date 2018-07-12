@@ -122,13 +122,17 @@ $(function(){
 
                     if(data){
                         $("#mis").css("display","none");
-                        
+                        $("#name-name").html(oEmail);
+                        $('#myModal').modal('hide')
+
                         $(".ok").hide();
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#goLogin").css("display","block");
-                        $("#goregst").css("display","none");
+                        $("#name").css("display","block");
+                        $("#goin1").css("display","none");
+
+                        
                     }else {
                         $("#mis").css("display","block");
                     }
@@ -211,27 +215,23 @@ $(function(){
             console.log(oEmailPwd);
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
-                url: "user/checkLogin.action",
+                url: "user/checkRegist.action",
                 data:({
-                	email:oEmail,
-                    password:oPwd,
+                	email:oRegEmail,
+                    password:oRegPwd,
                     code:oEmailPwd
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
                     if(data){
                         $("#misYan").css("display","none");
-                        $("#name-name").html(oEmail);
-                        $('#myModal').modal('hide')
-
+                    
                         $(".ok").hide();
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#name").css("display","block");
-                        $("#goin1").css("display","none");
-
-                        
+                        $("#goLogin").css("display","block");
+                        $("#goregst").css("display","none");
                     }else {
                         $("#misYan").css("display","block");
                     }
