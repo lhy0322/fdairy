@@ -1,0 +1,88 @@
+.foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #F8F8F8;
+}
+.small-link div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.small-link div span a{
+    color: #523026;
+}
+.control-label{
+    color: #523026;
+}
+.color3{
+    color: #523026;
+}
+.navbar-color{
+    background: #523026;
+}
+.navbar-color div{
+    color: #ffffff;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+.color1{
+    color: #fff;
+}
+.logo{
+    height: 80px;
+    padding: 0;
+    line-height: 100%;
+    font-size: 50px;
+}
+.search{
+    margin-top: 20px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.search-size{
+    padding: 6px 40px;
+    background: #B15546;
+    color: white;
+}
+.address{
+    color: #C23415;
+}
+.navbar{
+    background: #F1E6D4;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #e7ceb1;
+}
+
+/*导航按钮*/
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #e7ceb1;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #e7ceb1;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+.dropdown-menu{
+    background: #F1E6D4;
+}
+.dropdown-menu li a{
+    line-height: 100%;
+    height: 100%;
+}
+.dropdown-menu li a:hover{
+    background: #F1E6D4;
+    text-decoration: underline;
+}

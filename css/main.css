@@ -1,0 +1,172 @@
+.main{
+    box-shadow: 2px 2px 3px #cccccc;
+    margin: 20px auto;
+    border: 1px solid #eeeeee;
+}
+.top-left{
+    padding: 20px 50px;
+}
+.top-left img{
+    width: 100%;
+    margin: 20px auto;
+}
+.btn-1{
+    padding: 0 60px;
+    margin-bottom: 20px;
+}
+.btn-2{
+    float: left;
+}
+.btn-3{
+    float: right;
+}
+.money{
+    color: #FF6708;
+}
+.xiangqing{
+    margin: 20px 0;
+}
+.xiangqing1{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+h3 {
+    line-height: 30px;
+    text-align: center;
+    width: auto;
+    font-size: 20px;
+    margin: 15px auto;
+    height: 30px;
+}
+h3 strong{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #FF6708;
+}
+.jieshao{
+
+    margin: 10px 0;
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 30px;
+}
+.main1{
+    box-shadow: 2px 2px 3px #cccccc;
+    border: 1px solid #eeeeee;
+}
+.things{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*padding-bottom: 20px;*/
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #cccccc;
+    border: 1px solid #eeeeee;
+}
+.thing{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.things .nav-pills{
+    border-bottom: 1px solid #eeeeee;
+}
+.food-show {
+    padding: 10px 15px;
+}
+.row {
+     margin-right: 0;
+     margin-left: 0;
+}
+.shopping h4,h5,h6{
+    margin: 10px 0;
+}
+/*.food-show{*/
+    /*padding: 10px 30px;*/
+/*}*/
+.food-show .food-box{
+    /*margin-top: 10px;*/
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border: 1px solid #eeeeee;
+}
+.food-show .food-box img{
+    padding: 10px;
+    /*width: 30%;*/
+    height: auto;
+}
+.food-show .food-box p{
+    margin-top: 10px;
+}
+.box-top{
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+.box-top2{
+    height: auto;
+    /*margin-bottom: 20px;*/
+    padding: 10px 10px;
+}
+.box-top2 span{
+    float: left;
+    margin-right: 20px;
+}
+.slow{
+    color: white;
+    padding: 5px;
+    background: #FF6708;
+}
+.fast{
+    color: white;
+    padding: 5px;
+    background: red;
+}
+
+
+.good{
+    color: #C23415;
+    text-align: center;
+}
+.good span{
+    padding: 3px 10px;
+    border: 1px solid salmon;
+    border-radius: 5px;
+}
+.good span:hover{
+    cursor: pointer;
+}
+
+.mai{
+    background: #555555;
+    /*color: white;*/
+}
+.pay{
+    float: right;
+    margin: 5px 20px;
+}
+.pay1{
+    float: left;
+    margin: 5px 20px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #FF6708;
+    cursor: default;
+    background-color: #fff;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.nav-tabs>li>a {
+    text-align: center;
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.modal-body div img{
+    margin: 0 auto;
+}

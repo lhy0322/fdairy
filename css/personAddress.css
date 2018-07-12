@@ -1,0 +1,120 @@
+.logo2{
+    height: 30px;
+    margin-top: -5px;
+}
+.top-bg{
+    padding: 0 0;
+}
+.bg{
+
+    width: auto;
+}
+.bg img{
+    width: 100%;
+}
+.personal{
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.personal img{
+    width:  70%;
+    /*min-width: 60%;*/
+    max-width: 50%;
+    margin: 0 auto;
+}
+.personal p{
+
+    text-align: center;
+    padding: 5px 0;
+}
+.person div{
+    /*padding: 0 5px;*/
+    /*margin-bottom: 20px;*/
+    /*height: 100px;*/
+    /*background: pink;*/
+}
+.person div a{
+    color: #828282;
+    text-decoration: none;
+}
+.person div img{
+    margin: 5px auto;
+    height: 25%;
+}
+.person{
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    padding-left: 0 ;
+    padding-right: 0;
+    border: 1px solid #dddddd;
+}
+.person h4{
+    margin-bottom: 20px;
+    color: #AE5545;
+    border-bottom: 1px solid #b9b9b9;
+    line-height: 30px;
+    text-indent: 2em;
+    height: 30px;
+}
+.person p{
+    /*border-bottom: 1px solid #777777;*/
+    background: #F3F3F3;
+    color: #555555;
+    box-shadow: 2px 2px #dedede;
+    padding: 8px 5px;
+}
+.checkbox .addre{
+    width: 100%;
+    border-bottom: 1px solid #959595;
+    box-shadow: none;
+}
+.checkbox .addre p{
+    padding: 10px 0;
+    margin-bottom: 0;
+    background: none;
+    box-shadow: none;
+}
+.checkbox .addre p em{
+    float: left;
+    color: #AE5545;
+}
+.checkbox .addre p .addName{
+    float: left;
+    margin-left: 10px;
+}
+.checkbox .addre p .addPhone{
+    float: right;
+    margin-right: 10px;
+}
+.checkbox .addre .addAdd{
+    font-size: 13px;
+}
+.person-baocun{
+    background: #AE5545;
+    color: white;
+}
+.person-baocun:hover{
+    background: #c21805;
+    color: white;
+}
+.red{
+    color: red;
+}
+.tijiao{
+    background-color: #FF6708;
+    color: white;
+    border: 1px solid #FF6708;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+.tijiao:hover{
+    cursor: pointer;
+}
+.form-horizontgal label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-horizontgal div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美食日记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/headerAndFoot.css">
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">FDiary</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a  href="index.html">首页</a></li>
+                <li><a href="love.html">觅食派</a></li>
+                <li><a href="day.html">食品日记</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><button type="submit" class="btn btn-default">登录</button></li>-->
+                <!--<li><button type="submit" class="btn btn-default">注册</button></li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">hjy001 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <img alt="Responsive images" class="navbar-brand img-responsive logo" src="images/logo1.png">
+    <a class="navbar-brand logo" href="#"><img alt="Responsive images" class="navbar-brand img-responsive logo" src="images/title.png"></a>
+    <form class="bs-example bs-example-form" role="form">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-8">
+                <div class="input-group">
+                    <input type="text" class="form-control search" placeholder="搜索周边美食店铺">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn search search-size btn-default">搜索</button>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+
+<div class=" container main">
+    <div class="row">
+        <div class="top-left col-xs-12 col-sm-4">
+            <img class=" img-circle col-xs-12 col-sm-4 col-sm-offset-3" src="images/pic1.png">
+            <div class="btn-1 col-xs-12 col-sm-12" >
+                <button type="button" class="btn-2 btn btn-info"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 喜欢</button>
+                <button type="button" class="btn-3 btn btn-info"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 邀请</button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <h4 class="xiangqing1"><strong>麦当劳（长沙平和堂饭店）</strong></h4>
+            <h6 class="xiangqing">人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+            <h5 class="xiangqing">综合评价 <span>4.6分</span></h5>
+            <h5 class="xiangqing">美味快餐：<span>送10元代金券</span></h5>
+            <h5 class="xiangqing">配送速度 <span>36分钟</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="slow">慢</span> &nbsp;&nbsp;&nbsp;<span class="fast">中</span> &nbsp;&nbsp;&nbsp;<span class="slow">快</span></h5>
+            <h5 class="xiangqing">营业时间：<span>07:00-23:55</span></h5>
+        </div>
+    </div>
+</div>
+
+<h3><strong>商家公告</strong></h3>
+<div class=" container main1">
+    <p class="jieshao">感谢您一直以来对麦当劳的支持，我们将持续提供快速优质的外送服务，如果您的餐品超过30分钟未送达，我们将赠送麦当劳指定
+
+        食品券以示歉意（订单金额大于或等于人民币300元或在恶劣天气等不可抗力的情况下，我们的送餐时间可能会超过30分钟）。感谢
+
+        您一直以来对我们不离不弃！</p>
+
+</div>
+
+<div class="container things">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active col-xs-6 col-sm-6"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">推荐菜单</a></li>
+        <li role="presentation" class="col-xs-6 col-sm-6"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">用户评价</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="container" >
+                <div class="row food-show">
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                        <div class="shopping col-xs-8 col-sm-9">
+                            <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
+                            <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                            <h5>美味快餐：<span>送10元代金券</span></h5>
+                            <h5>综合评价 <span>4.6分</span></h5>
+                            <h5>配送速度 <span>36分钟</span></h5>
+                            <button type="button" class="btn  btn-danger">加入订单</button>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                        <div class="shopping col-xs-8 col-sm-9">
+                            <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
+                            <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                            <h5>美味快餐：<span>送10元代金券</span></h5>
+                            <h5>综合评价 <span>4.6分</span></h5>
+                            <h5>配送速度 <span>36分钟</span> </h5>
+                            <button type="button" class="btn  btn-danger">加入订单</button>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                        <div class="shopping col-xs-8 col-sm-9 ">
+                            <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
+                            <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                            <h5>美味快餐：<span>送10元代金券</span></h5>
+                            <h5>综合评价 <span>4.6分</span></h5>
+                            <h5>配送速度 <span>36分钟</span></h5>
+                            <button type="button" class="btn  btn-danger">加入订单</button>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                        <div class="shopping col-xs-8 col-sm-9">
+                            <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
+                            <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                            <h5>美味快餐：<span>送10元代金券</span></h5>
+                            <h5>综合评价 <span>4.6分</span></h5>
+                            <h5>配送速度 <span>36分钟</span></h5>
+                            <button type="button" class="btn  btn-danger">加入订单</button>
+                        </div>
+                    </div>
+
+                    <!--<nav aria-label="...">-->
+                        <!--<ul class="pager">-->
+                            <!--<li><a href="#">上一页</a></li>-->
+                            <!--<li><a href="#">下一页</a></li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+
+                <button type="button" class="pay1 btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+                    查看购物车
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel2">花花煲仔饭</span></h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <p>小份炸薯条</p>
+                                        glyphicon glyphicon-plus
+                                        glyphicon glyphicon-minus
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h3><strong>支付宝支付</strong></h3>
+                                        <img src="images/ma.PNG" alt="Responsive image" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">放弃支付</button>
+                                <button type="button" class="btn btn-primary">支付成功</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="pay btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    去支付
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">总价：<span class="money">45元</span></h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        查收地址：<input type="text">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h3><strong>微信支付</strong></h3>
+                                        <img src="images/ma.PNG" alt="Responsive image" class="img-responsive">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <h3><strong>支付宝支付</strong></h3>
+                                        <img src="images/ma.PNG" alt="Responsive image" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">放弃支付</button>
+                                <button type="button" class="btn btn-primary">支付成功</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+            <div class="container" >
+                <div class="row food-show">
+                    <div class="box-top col-xs-12 col-sm-12">
+                        店铺分数：<span>484</span>&nbsp;&nbsp;&nbsp;&nbsp;综合评价：<span>4.9分</span>&nbsp;&nbsp;&nbsp;&nbsp;服务态度：<span>5.0分</span>
+                    </div>
+                    <div class="box-top2 col-xs-12 col-sm-12">
+                        <span class="food-box ">口感好（9）</span><span class="food-box ">品种多（12）</span><span class="food-box ">环境良好（8）</span><span class="food-box ">服务质量好（9）</span>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                        <div class="shopping col-xs-9 col-sm-9">
+                            <p>阿珍me</p>
+                            <p>口味不错，服务挺好的，下次还要来</p>
+                        </div>
+                        <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
+                            <p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>
+                            <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                        <div class="shopping col-xs-9 col-sm-9">
+                            <p>阿珍me</p>
+                            <p>口味不错，服务挺好的，下次还要来</p>
+                        </div>
+                        <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
+                            <p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>
+                            <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                        <div class="shopping col-xs-9 col-sm-9">
+                            <p>阿珍me</p>
+                            <p>口味不错，服务挺好的，下次还要来</p>
+                        </div>
+                        <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
+                            <p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>
+                            <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                        <div class="shopping col-xs-9 col-sm-9">
+                            <p>阿珍me</p>
+                            <p>口味不错，服务挺好的，下次还要来</p>
+                        </div>
+                        <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
+                            <p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>
+                            <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                        </div>
+                    </div>
+                    <div class="food-box col-xs-12 col-sm-12">
+                        <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                        <div class="shopping col-xs-9 col-sm-9">
+                            <p>阿珍me</p>
+                            <p>口味不错，服务挺好的，下次还要来</p>
+                        </div>
+                        <div class="shopping col-xs-offset-5 col-sm-offset-0 col-xs-7 col-sm-2">
+                            <p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>
+                            <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                        </div>
+                    </div>
+                    <!--<nav aria-label="Page navigation">-->
+                        <!--<ul class="pagination fen">-->
+                            <!--<li>-->
+                                <!--<a href="#" aria-label="Previous">-->
+                                    <!--<span aria-hidden="true">&laquo;</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li><a href="#">1</a></li>-->
+                            <!--<li><a href="#">2</a></li>-->
+                            <!--<li><a href="#">3</a></li>-->
+                            <!--<li><a href="#">4</a></li>-->
+                            <!--<li><a href="#">5</a></li>-->
+                            <!--<li>-->
+                                <!--<a href="#" aria-label="Next">-->
+                                    <!--<span aria-hidden="true">&raquo;</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</nav>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--<h3><strong>推荐菜单</strong></h3>-->
+
+<!--<div class="container things" >-->
+    <!--<div class="row food-show">-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">-->
+            <!--<div class="shopping col-xs-8 col-sm-9">-->
+                <!--<h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>-->
+                <!--<h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>-->
+                <!--<h5>美味快餐：<span>送10元代金券</span></h5>-->
+                <!--<h5>综合评价 <span>4.6分</span></h5>-->
+                <!--<h5>配送速度 <span>36分钟</span></h5>-->
+                <!--<button type="button" class="btn  btn-danger">加入订单</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">-->
+            <!--<div class="shopping col-xs-8 col-sm-9">-->
+                <!--<h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>-->
+                <!--<h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>-->
+                <!--<h5>美味快餐：<span>送10元代金券</span></h5>-->
+                <!--<h5>综合评价 <span>4.6分</span></h5>-->
+                <!--<h5>配送速度 <span>36分钟</span> </h5>-->
+                <!--<button type="button" class="btn  btn-danger">加入订单</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">-->
+            <!--<div class="shopping col-xs-8 col-sm-9 ">-->
+                <!--<h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>-->
+                <!--<h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>-->
+                <!--<h5>美味快餐：<span>送10元代金券</span></h5>-->
+                <!--<h5>综合评价 <span>4.6分</span></h5>-->
+                <!--<h5>配送速度 <span>36分钟</span></h5>-->
+                <!--<button type="button" class="btn  btn-danger">加入订单</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">-->
+            <!--<div class="shopping col-xs-8 col-sm-9">-->
+                <!--<h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>-->
+                <!--<h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>-->
+                <!--<h5>美味快餐：<span>送10元代金券</span></h5>-->
+                <!--<h5>综合评价 <span>4.6分</span></h5>-->
+                <!--<h5>配送速度 <span>36分钟</span></h5>-->
+                <!--<button type="button" class="btn  btn-danger">加入订单</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<nav aria-label="...">-->
+            <!--<ul class="pager">-->
+                <!--<li><a href="#">上一页</a></li>-->
+                <!--<li><a href="#">下一页</a></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<h3><strong>网友评价</strong></h3>-->
+<!--<div class="container things" >-->
+    <!--<div class="row food-show">-->
+        <!--<div class="box-top col-xs-12 col-sm-12">-->
+            <!--店铺分数：<span>484</span>&nbsp;&nbsp;&nbsp;&nbsp;综合评价：<span>4.9分</span>&nbsp;&nbsp;&nbsp;&nbsp;服务态度：<span>5.0分</span>-->
+        <!--</div>-->
+        <!--<div class="box-top2 col-xs-12 col-sm-12">-->
+            <!--<span class="food-box ">口感好（9）</span><span class="food-box ">品种多（12）</span><span class="food-box ">环境良好（8）</span><span class="food-box ">服务质量好（9）</span>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">-->
+            <!--<div class="shopping col-xs-9 col-sm-9">-->
+                <!--<p>阿珍me</p>-->
+                <!--<p>口味不错，服务挺好的，下次还要来</p>-->
+            <!--</div>-->
+            <!--<div class="shopping col-xs-offset-6  col-sm-offset-0 col-xs-6 col-sm-2">-->
+                <!--<p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>-->
+                <!--<p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">-->
+            <!--<div class="shopping col-xs-9 col-sm-9">-->
+                <!--<p>阿珍me</p>-->
+                <!--<p>口味不错，服务挺好的，下次还要来</p>-->
+            <!--</div>-->
+            <!--<div class="shopping col-xs-offset-6  col-sm-offset-0 col-xs-6 col-sm-2">-->
+                <!--<p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>-->
+                <!--<p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">-->
+            <!--<div class="shopping col-xs-9 col-sm-9">-->
+                <!--<p>阿珍me</p>-->
+                <!--<p>口味不错，服务挺好的，下次还要来</p>-->
+            <!--</div>-->
+            <!--<div class="shopping col-xs-offset-6  col-sm-offset-0 col-xs-6 col-sm-2">-->
+                <!--<p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>-->
+                <!--<p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">-->
+            <!--<div class="shopping col-xs-9 col-sm-9">-->
+                <!--<p>阿珍me</p>-->
+                <!--<p>口味不错，服务挺好的，下次还要来</p>-->
+            <!--</div>-->
+            <!--<div class="shopping col-xs-offset-6  col-sm-offset-0 col-xs-6 col-sm-2">-->
+                <!--<p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>-->
+                <!--<p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="food-box col-xs-12 col-sm-12">-->
+            <!--<img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">-->
+            <!--<div class="shopping col-xs-9 col-sm-9">-->
+                <!--<p>阿珍me</p>-->
+                <!--<p>口味不错，服务挺好的，下次还要来</p>-->
+            <!--</div>-->
+            <!--<div class="shopping col-xs-offset-6  col-sm-offset-0 col-xs-6 col-sm-2">-->
+                <!--<p class="col-xs-9 col-sm-offset-2 col-sm-8">2018-01-01</p>-->
+                <!--<p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<nav aria-label="Page navigation">-->
+            <!--<ul class="pagination fen">-->
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Previous">-->
+                        <!--<span aria-hidden="true">&laquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li><a href="#">1</a></li>-->
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <!--<li>-->
+                    <!--<a href="#" aria-label="Next">-->
+                        <!--<span aria-hidden="true">&raquo;</span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="container-default foot">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-12 col-sm-4">-->
+                <!--<h4>关于我们</h4>-->
+                <!--<div class="row small-link">-->
+                    <!--<div class="col-xs-4 col-sm-12">-->
+                        <!--<span><a href="#">食品日记</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-12">-->
+                        <!--<span><a href="#">外面点单</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-12">-->
+                        <!--<span><a href="#">共邀点单</a></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4">-->
+                <!--<h4>友情链接</h4>-->
+                <!--<div class="row small-link">-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">天天美食</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">大众点评</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">饿了么</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">美团外卖</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">豆果美食</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">上厨房</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 col-sm-6">-->
+                        <!--<span><a href="#">口碑外卖</a></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-12 col-sm-4">-->
+                <!--<h4>联系我们</h4>-->
+                <!--<form class="form-horizontal">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="inputEmail3" class="col-sm-3 control-label">您的姓名</label>-->
+                        <!--<div class="col-sm-9">-->
+                            <!--<input type="email" class="form-control" id="inputEmail3" placeholder="您的姓名">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="inputPassword3" class="col-sm-3 control-label">您的邮箱</label>-->
+                        <!--<div class="col-sm-9">-->
+                            <!--<input type="password" class="form-control" id="inputPassword3" placeholder="您的邮箱">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="inputPassword3" class="col-sm-3 control-label">意见反馈</label>-->
+                        <!--<div class="col-sm-9">-->
+                            <!--<textarea class="col-sm-12 form-control" rows="3" cols="20">-->
+                            <!--</textarea>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<div class="col-sm-offset-3 col-sm-9">-->
+                            <!--<button type="submit" class="btn btn-block color1">提交</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="container-default navbar-color ">
+    <div class="container">
+        &copy;2018 Food Corner. All rights reserved | Design by FDiary
+    </div>
+
+</div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+    $(function (){
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+<!-- 包括所有已编译的插件 -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

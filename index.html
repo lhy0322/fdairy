@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美食日记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/headerAndFoot.css">
+
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<img class="navbar-brand logo" src="images/logo.png"></img>-->
+                <div class="navbar-brand">
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true">&nbsp;长沙市</span>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!--<form class="navbar-form navbar-left">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control" placeholder="想吃点啥？">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-default">搜索</button>-->
+                <!--</form>-->
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a  href="#">首页 <span class="sr-only">(curr2ent)</span></a></li>
+                    <li><a href="love.html">觅食派</a></li>
+                    <li><a href="day.html">食品日记</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><button type="submit" class="btn btn-default">登录</button></li>-->
+                    <!--<li><button type="submit" class="btn btn-default">注册</button></li>-->
+                    <!-- Button trigger modal -->
+                    <ul class="nav navbar-nav navbar-right" id="name">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="name-name"> hjy001</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="personMain.html">个人中心</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button id="goin1" class="goin1" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        登录
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title login" id="myModalLabel">FDiary</h4>
+                                    <h5 class="loginTital">为您提供专属的美食空间</h5>
+                                </div>
+                                <!--登录-->
+                                <div class="modal-body goLogin">
+                                    <form class="form-horizontal" id="loginForm">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label required">邮箱</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" name="email" placeholder="请输入您的邮箱">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-9">
+                                                <input type="password"  class="form-control" name="pwd" placeholder="请输入密码">
+                                                <em id="mis"></em>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox">记住密码
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-9">
+                                                <button type="submit" class="btn btn-default btn-block">登录</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--注册-->
+                                <div class="modal-body goregst">
+                                    <form class="form-horizontal" id="registForm">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-3 control-label">邮箱</label>
+                                            <div class="col-sm-8">
+                                                <input type="email" class="form-control" name="regEmail" placeholder="请输入您的邮箱">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-3 control-label">密码</label>
+                                            <div class="col-sm-8">
+                                                <input type="password" class="form-control" name="regPwd" placeholder="请输入密码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-3 control-label">邮箱验证码</label>
+                                            <div class="col-sm-6">
+                                                <input type="password" class="form-control" name="EmailPwd" placeholder="请输入邮箱验证码">
+                                            </div>
+                                            <button type="submit" class="btn btn-default col-sm-2">获取验证码</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-8">
+                                                <button type="submit" class="btn btn-default btn-block">注册</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--忘记密码-->
+                                <div class="modal-body goForget">
+                                    <form class="form-horizontal" id="forgetForm">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-3 control-label">邮箱</label>
+                                            <div class="col-sm-8">
+                                                <input type="email" class="form-control" name="regEmail1" placeholder="请输入您注册时的邮箱">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-3 control-label">邮箱验证码</label>
+                                            <div class="col-sm-6">
+                                                <input type="password" class="form-control" id="EmailPwd1" placeholder="请输入邮箱验证码">
+                                            </div>
+                                            <button type="submit" class="btn btn-default col-sm-2">获取验证码</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-8">
+                                                <button id="back" type="submit" class="btn btn-default btn-block">找回密码</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--重置密码-->
+                                <div class="modal-body ok">
+                                    <form class="form-horizontal" id="reForm">
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" id="repwd" name="repwd" placeholder="请输入密码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" name="confirm_password" placeholder="请确认密码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-9">
+                                                <button id="denglu" type="submit" class="btn btn-default btn-block">重置密码</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer goLogin-bottom">
+                                    <div class="goreg">
+                                        没有账号？<a href="#" id="goto">立即注册</a>
+                                    </div>
+                                    <div class="forget">
+                                        <a href="#" id="zhaohui">忘记密码</a>
+                                    </div>
+                                </div>
+                                <div class="modal-footer goregst-bottom">
+                                    <div class="goreg">
+                                        已有账号？<a href="#" class="goin">立即登录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+        <!--<img alt="Responsive image" class="navbar-brand img-responsive logo" src="images/logo1.png">-->
+        <!--<a class="navbar-brand logo" href="#"><img alt="Responsive image" class="navbar-brand img-responsive logo" src="images/title.png"></a>-->
+        <a class="navbar-brand logo" href="#"><img alt="Responsive image" class="navbar-brand img-responsive logo" src="images/logo4.png"></a>
+        <form class="bs-example bs-example-form" role="form">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="input-group search-box">
+                        <input type="text" class="form-control search" placeholder="想吃点啥？">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn search search-size btn-default">搜索</button>
+                        </div><!-- /btn-group -->
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </form>
+    </div>
+
+    <div class="container lunbo">
+        <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/banner1.png" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="images/banner2.png" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="images/banner3.png" alt="Third slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+        <div class="row zhonglei">
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/xian.png">生鲜蔬果</span></a></div>
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/hamburger.png">披萨汉堡</span></a></div>
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/cabbage.png">家常小菜</span></a></div>
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/baozi.png">包子粥铺</span></a></div>
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/bake.png">冒菜麻辣</span></a></div>
+            <div class="col-xs-6 col-sm-2 header4 hei"><a href="#" class="color3"><span class="food-box "><img alt="Responsive image" class="img-responsive pic" src="images/drink.png">甜点饮品</span></a></div>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div class="row box-border">
+            <div class="col-xs-12 col-sm-12 header1">
+                <h4 class="color1">最新店铺    <small class="color1">为您推荐最新小店</small></h4>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box" >
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive " alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                <button type="button" class="btn btn-primary btn-block">加载更多</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div class="row box-border">
+            <div class="col-xs-12 col-sm-12 header2">
+                <h4 class="color1">离我最近    <small class="color1">推选最短配送时间</small></h4>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive " alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                <button type="button" class="btn btn-primary btn-block">加载更多</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div class="row box-border">
+            <div class="col-xs-12 col-sm-12 header3">
+                <h4 class="color1">为您优选    <small class="color1">综合服务最高的美食小店</small></h4>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive" alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="new-box">
+                    <img src="images/pic1.png" class="img-responsive " alt="Responsive image">
+                    <h5>筒子骨粉店</h5>
+                    <small>新店开张，送代金券哦</small>
+                    <div class="shop">
+                        <strong class="color2 money">￥15</strong>
+                        <small>已售<span>2321</span></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                <button type="button" class="btn btn-primary btn-block">加载更多</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-default foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <h4>关于我们</h4>
+                <div class="row small-link">
+                    <div class="col-xs-4 col-sm-12">
+                        <span><a href="#">食品日记</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-12">
+                        <span><a href="#">外面点单</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-12">
+                        <span><a href="#">共邀点单</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <h4>友情链接</h4>
+                <div class="row small-link">
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">天天美食</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">大众点评</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">饿了么</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">美团外卖</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">豆果美食</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">上厨房</a></span>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        <span><a href="#">口碑外卖</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+               <h4>联系我们</h4>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">您的姓名</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="您的姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">您的邮箱</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="您的邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">意见反馈</label>
+                        <div class="col-sm-9">
+                            <textarea class="col-sm-12 form-control" rows="3" cols="20">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-block color1">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-default navbar-color ">
+        <div class="container">
+            &copy;2018 Food Corner. All rights reserved | Design by FDiary
+        </div>
+
+    </div>
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- 包括所有已编译的插件 -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

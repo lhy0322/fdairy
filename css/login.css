@@ -1,0 +1,23 @@
+.login{
+    width: 100%;
+    line-height:40px;
+    height: 40px;
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Segoe Script";
+    color: #C8837E;
+    font-size: 30px;
+}
+.loginTital{
+    color: #AD4F46;
+    line-height:30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+.goreg{
+    float: left;
+}
+.forget{
+    float: right;
+}

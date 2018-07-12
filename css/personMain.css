@@ -1,0 +1,46 @@
+.logo2{
+    height: 30px;
+    margin-top: -5px;
+}
+.top-bg{
+    padding: 0 0;
+}
+.bg{
+
+    width: auto;
+}
+.bg img{
+    width: 100%;
+}
+.personal{
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.personal img{
+    width:  70%;
+    /*min-width: 60%;*/
+    max-width: 50%;
+    margin: 0 auto;
+}
+.personal p{
+    text-align: center;
+    padding: 5px 0;
+}
+.person div{
+    height: 100px;
+    /*background: pink;*/
+}
+.person div a{
+    color: #828282;
+    text-decoration: none;
+}
+.person div img{
+    margin: 10px auto;
+    height: 25%;
+}
+.person div h5{
+    text-align: center;
+}
+.person p{
+    border-bottom: 1px solid #777777;
+}
