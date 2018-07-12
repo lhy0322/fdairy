@@ -101,9 +101,8 @@ $(function(){
                     if(data){
                         alert("提交表单");
                         $("#name-name").html(oEmail);
-                        $("#myModal").css("display","none");
-                        $(".modal-backdrop").css("display","none");
-                        
+                        $('#myModal').modal('hide')
+
                         $(".ok").hide();
                         $("input").val("");
                         $("label.error").css("display","none");
@@ -146,11 +145,11 @@ $(function(){
             // confirm_password:{
             //     equalTo:"两次密码输入不一致"
             // }
-        },
-        success: function(label) {
-            // label.removeClass("error").addClass("valid").text("Ok!")
-
         }
+        // success: function(label) {
+        //     // label.removeClass("error").addClass("valid").text("Ok!")
+
+        // }
 
     });
     //注册的表单
