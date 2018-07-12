@@ -105,7 +105,8 @@ $(function(){
         	var oEmail = $('[name=email]').val();
             var oPwd = $('[name=pwd]').val();
             console.log(oEmail)
-            console.log(oPwd)      
+            console.log(oPwd)   
+            $("#mis").css("display","none");   
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
                 url: "user/checkLogin.action",
@@ -121,9 +122,6 @@ $(function(){
 
                     if(data){
                         $("#mis").css("display","none");
-                        alert("登陆成功");
-                        
-
                         $("#name-name").html(oEmail);
                         $('#myModal').modal('hide')
 
