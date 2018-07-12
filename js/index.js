@@ -122,17 +122,13 @@ $(function(){
 
                     if(data){
                         $("#mis").css("display","none");
-                        $("#name-name").html(oEmail);
-                        $('#myModal').modal('hide')
-
+                        
                         $(".ok").hide();
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#name").css("display","block");
-                        $("#goin1").css("display","none");
-
-                        
+                        $("#goLogin").css("display","block");
+                        $("#goregst").css("display","none");
                     }else {
                         $("#mis").css("display","block");
                     }
@@ -191,6 +187,8 @@ $(function(){
                 console.log(data);
                 if(!data){
                     $("#hasRegist").css("display","block");
+                }else{
+                    $("#hasRegist").css("display","none");
                 }
             },
             error: function (jqXHR) {//失败后执行的方法。
@@ -207,24 +205,22 @@ $(function(){
         submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form
             var oRegEmail = $('[name=regEmail]').val();
             var oRegPwd = $('[name=regPwd]').val();
+            var oEmailPwd =$('[name=EmailPwd]').val();
             console.log(oRegEmail);
-            console.log(oRegEmail);
-
+            console.log(oRegPwd);
+            console.log(oEmailPwd);
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
                 url: "user/checkLogin.action",
                 data:({
                 	email:oEmail,
-                    password:oPwd
+                    password:oPwd,
+                    code:oEmailPwd
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
-                    console.log(data);
-
-                    sessionStorage.setItem("email",oEmail);
-
                     if(data){
-                        $("#mis").css("display","none");
+                        $("#misYan").css("display","none");
                         $("#name-name").html(oEmail);
                         $('#myModal').modal('hide')
 
@@ -237,7 +233,7 @@ $(function(){
 
                         
                     }else {
-                        $("#mis").css("display","block");
+                        $("#misYan").css("display","block");
                     }
                 },
                 error: function (jqXHR) {//失败后执行的方法。
