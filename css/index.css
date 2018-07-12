@@ -190,10 +190,10 @@ header4{
     text-align: center;
 }
 #name{
-    display: block;
+    display: none;
 }
 #goin1{
-    display: none;
+    display: block;
 }
 #mis{
     display: none;
