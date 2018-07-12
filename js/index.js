@@ -130,9 +130,8 @@ $(function(){
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#name").css("display","block");
-                        $("#goin1").css("display","none");
-
+                        $("#goLogin").css("display","block");
+                        $("#goregst").css("display","none");
                         
                     }else {
                         $("#mis").css("display","block");
