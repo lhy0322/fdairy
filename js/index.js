@@ -77,9 +77,9 @@ $("#denglu").click(function(){
 // });
 $(function(){
     //退出
-    $("#exit").click(function(){
+    $(".ok-exit").click(function(){
         sessionStorage.removeItem("email");
-
+        $('#myModal2').modal('hide')
         $("#name").css("display","none");
         $("#goin1").css("display","block");
     })

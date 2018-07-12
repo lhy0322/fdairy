@@ -184,12 +184,16 @@ header4{
     font-weight: bold;
     color: green;
 }
-
+.exit-text{
+    font-size: 20px;
+    padding: 30px 30px;
+    text-align: center;
+}
 #name{
-    display: none;
+    display: block;
 }
 #goin1{
-    display: block;
+    display: none;
 }
 #mis{
     display: none;
