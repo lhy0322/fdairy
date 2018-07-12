@@ -76,7 +76,15 @@ $("#denglu").click(function(){
 //     });
 // });
 $(function(){
-   
+    //退出
+    $("#exit").click(function(){
+        sessionStorage.removeItem("email");
+        
+        $("#name").css("display","block");
+        $("#goin1").css("display","none");
+    })
+
+    //session
     var userEmail = sessionStorage.getItem("email");
     console.log(userEmail);
     if(userEmail != undefined){

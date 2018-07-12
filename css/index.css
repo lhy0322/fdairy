@@ -168,7 +168,7 @@ header4{
 .goForget{
     display: none;
 }
-.goin1{
+.exit,.goin1{
     background: #C0AB84;
     border: 1px solid #C0AB84;
     padding: 5px 10px;
