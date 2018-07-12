@@ -60,6 +60,21 @@ $("#denglu").click(function(){
     $(".ok").hide();
 });
 // --------------------------------------------------------------------------------------------
+// $(document).ready(function(){
+//     $("#loginForm").validate({
+//         rules:{
+//             email:{
+//                 required:true,
+//                 email:true
+//             },
+//             url:"url",
+//             comment:"required",
+//             valcode: {
+//                 formula: "7+9"
+//             }
+//         }
+//     });
+// });
 $(function(){
 
     // 登录的表单
@@ -68,38 +83,43 @@ $(function(){
         //errorClass: "label.error", //默认为错误的样式类为：error
         focusInvalid: false, //当为false时，验证无效时，没有焦点响应
         onkeyup: false,
-        submitHandler: function(form){//表单提交句柄,为一回调函数，带一个参数：form
-            var oEmail = $('[name=email]').val();
+        submitHandler: function(form){  //表单提交句柄,为一回调函数，带一个参数：form
+        	var oEmail = $('[name=email]').val();
             var oPwd = $('[name=pwd]').val();
-            console.log(oEmail);
-            console.log(oPwd);
+            console.log(oEmail)
+            console.log(oPwd)      
             $.ajax({ //jQuery中的ajax方法
-                type: "GET",
-                url: "/user/checkLogin.action",
-                data:{
-                    email:oEmail,
+                type: "POST",
+                url: "user/checkLogin.action",
+                data:({
+                	email:oEmail,
                     password:oPwd
-                },
+                }),
                 dataType: "json",//数据类型是json
-                success: function (data) {
+                success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+                    console.log(data)
                     if(data){
                         alert("提交表单");
                         $("#name-name").html(oEmail);
-                        $("#name").css("display","block")
-                        $("#goin1").css("display","none")
+                        $("#myModal").css("display","none");
+                        $(".modal-backdrop").css("display","none");
+                        
+                        $(".ok").hide();
+                        $("input").val("");
+                        $("label.error").css("display","none");
+                        
+                        $("#name").css("display","block");
+                        $("#goin1").css("display","none");
                     }else {
                         $("#mis").addClass("error").text("邮箱或密码错误！")
                     }
-                    console.log(data);
-
                 },
                 error: function (jqXHR) {//失败后执行的方法。
                     console.log(jqXHR)
-                    // $("#mis").addClass("error").text("邮箱或密码错误！")
                 },
             })
-            //     alert("提交表单");
-            // form.submit();   //提交表单
+              //  alert("提交表单");
+              //  form.submit();   //提交表单
         },
         rules:{
             email:{
