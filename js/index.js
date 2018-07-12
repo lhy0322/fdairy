@@ -79,9 +79,9 @@ $(function(){
     //退出
     $("#exit").click(function(){
         sessionStorage.removeItem("email");
-        
-        $("#name").css("display","block");
-        $("#goin1").css("display","none");
+
+        $("#name").css("display","none");
+        $("#goin1").css("display","block");
     })
 
     //session
