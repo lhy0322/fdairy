@@ -130,8 +130,9 @@ $(function(){
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#goLogin").css("display","block");
-                        $("#goregst").css("display","none");
+                        $("#name").css("display","block");
+                        $("#goin1").css("display","none");
+
                         
                     }else {
                         $("#mis").css("display","block");
@@ -231,8 +232,16 @@ $(function(){
                         $("input").val("");
                         $("label.error").css("display","none");
                         
-                        $("#goLogin").css("display","block");
-                        $("#goregst").css("display","none");
+                        $(".goLogin-bottom").show();
+                        $(".goLogin").show();
+                        $(".goregst").hide();
+                        $(".goregst-bottom").hide();
+                        $(".goForget").hide();
+                        $(".ok").hide();
+                        $("input").val("");
+                        $("input").removeClass("error")
+                        $("label.error").css("display","none");
+
                     }else {
                         $("#misYan").css("display","block");
                     }
