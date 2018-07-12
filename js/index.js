@@ -120,7 +120,10 @@ $(function(){
                     sessionStorage.setItem("email",oEmail);
 
                     if(data){
+                        $("#mis").css("display","none");
                         alert("登陆成功");
+                        
+
                         $("#name-name").html(oEmail);
                         $('#myModal').modal('hide')
 
@@ -131,7 +134,7 @@ $(function(){
                         $("#name").css("display","block");
                         $("#goin1").css("display","none");
 
-                        $("#mis").css("display","none");
+                        
                     }else {
                         $("#mis").css("display","block");
                     }
