@@ -99,7 +99,7 @@ $(function(){
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
                     console.log(data)
                     if(data){
-                        alert("提交表单");
+                        alert("登陆成功");
                         $("#name-name").html(oEmail);
                         $('#myModal').modal('hide')
 
@@ -109,8 +109,10 @@ $(function(){
                         
                         $("#name").css("display","block");
                         $("#goin1").css("display","none");
+                        
+                        $("#mis").css("display","none");
                     }else {
-                        $("#mis").addClass("error").text("邮箱或密码错误！")
+                        $("#mis").css("display","block");
                     }
                 },
                 error: function (jqXHR) {//失败后执行的方法。
