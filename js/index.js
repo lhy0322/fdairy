@@ -177,14 +177,73 @@ $(function(){
 
     });
     //注册的表单
+
+    $("#getYan").click(function(){
+        var oRegEmail = $('[name=regEmail]').val();
+        $.ajax({ //jQuery中的ajax方法
+            type: "POST",
+            url: "user/checkEmailCode.action",
+            data:({
+                email:oRegEmail,
+            }),
+            dataType: "json",//数据类型是json
+            success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+                console.log(data);
+                if(!data){
+                    $("#mis").css("display","block");
+                }
+            },
+            error: function (jqXHR) {//失败后执行的方法。
+                console.log(jqXHR)
+            },
+        })
+    })
+
     $("#registForm").validate({
         debug: true, //调试模式取消submit的默认提交功能
         //errorClass: "label.error", //默认为错误的样式类为：error
         focusInvalid: false, //当为false时，验证无效时，没有焦点响应
         onkeyup: false,
         submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form
-            alert("提交表单");
-            form.submit();   //提交表单
+            var oRegEmail = $('[name=regEmail]').val();
+            var oRegPwd = $('[name=regPwd]').val();
+            console.log(oRegEmail);
+            console.log(oRegEmail);
+
+            $.ajax({ //jQuery中的ajax方法
+                type: "POST",
+                url: "user/checkLogin.action",
+                data:({
+                	email:oEmail,
+                    password:oPwd
+                }),
+                dataType: "json",//数据类型是json
+                success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+                    console.log(data);
+
+                    sessionStorage.setItem("email",oEmail);
+
+                    if(data){
+                        $("#mis").css("display","none");
+                        $("#name-name").html(oEmail);
+                        $('#myModal').modal('hide')
+
+                        $(".ok").hide();
+                        $("input").val("");
+                        $("label.error").css("display","none");
+                        
+                        $("#name").css("display","block");
+                        $("#goin1").css("display","none");
+
+                        
+                    }else {
+                        $("#mis").css("display","block");
+                    }
+                },
+                error: function (jqXHR) {//失败后执行的方法。
+                    console.log(jqXHR)
+                },
+            })
         },
         rules:{
             regEmail:{
@@ -212,10 +271,10 @@ $(function(){
                 equalTo:"两次密码输入不一致"
             }
         },
-        success: function(label) {
-            // label.removeClass("error").addClass("valid").text("Ok!")
+        // success: function(label) {
+        //     // label.removeClass("error").addClass("valid").text("Ok!")
 
-        }
+        // }
 
     });
     //找回密码
