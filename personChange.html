@@ -66,23 +66,24 @@
         <p class="col-xs-12">亲爱的小煜幂，您好！</p>
         <div class="col-xs-12 col-sm-12">
             <h4 class="col-xs-12 col-sm-12">修改密码</h4>
-            <form class="form-horizontgal">
+            <form class="form-horizontgal" id="personPwd">
                 <div class="form-group">
                     <label for="oldPwd" class="col-sm-2 control-label">原密码</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control" id="oldPwd" placeholder="原密码">
+                        <input type="email" class="form-control" name="oldPwd" id="oldPwd" placeholder="原密码">
+                        <p id="mis" class="error">原密码错误！!</p>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="newPwd" class="col-sm-2 control-label">新密码</label>
                     <div class="col-sm-9">
-                        <input type="password" class="form-control" id="newPwd" placeholder="新密码">
+                        <input type="password" class="form-control" name="newPwd" id="newPwd" placeholder="新密码">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="yesPwd" class="col-sm-2 control-label">确认密码</label>
                     <div class="col-sm-9">
-                        <input type="email" class="form-control" id="yesPwd" placeholder="确认密码">
+                        <input type="email" class="form-control" name="yesPwd" id="yesPwd" placeholder="确认密码">
                     </div>
                 </div>
                 <div class="form-group">
@@ -91,7 +92,6 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
@@ -105,6 +105,7 @@
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/exit.js"></script>
+<script src="js/personChange.js"></script>
 <!-- 包括所有已编译的插件 -->
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
