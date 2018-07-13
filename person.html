@@ -66,18 +66,18 @@
         <p class="col-xs-12">亲爱的小煜幂，您好！</p>
         <div class="col-xs-12 col-sm-12">
             <h4 class="col-xs-12 col-sm-12">个人基本信息</h4>
-            <form class="form-horizontgal col-xs-12 col-sm-12">
+            <form id="personForm" class="form-horizontgal col-xs-12 col-sm-12">
                 <div class="form-group col-xs-12 col-sm-12">
                     <label for="oldPwd" class="col-sm-2 control-label">昵 称:</label>
                     <div class="col-sm-9 ">
-                        <input type="email" class="form-control" id="oldPwd" placeholder="昵称">
+                        <input type="text" class="form-control" name="niName" id="niName" placeholder="昵称">
                     </div>
                 </div>
                 <div class="form-group col-xs-12 col-sm-12">
                     <label for="pho" class="col-sm-2 col-xs-5 control-label">性 别:</label>
                     <div class="col-sm-9 col-xs-6">
-                        <input type="radio" name="sex"  checked="checked" value="1">男
-                        <input type="radio" name="sex"  value="2">女
+                        <input type="radio" name="sex"  checked="checked" value="男">男
+                        <input type="radio" name="sex"  value="女">女
                     </div>
                 </div>
                 <div class="form-group col-xs-12 col-sm-12">
@@ -93,7 +93,7 @@
                 <div class="form-group col-xs-12 col-sm-12">
                     <label for="yesPwd" class="col-sm-2 control-label">生 日:</label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" id="yesPwd" placeholder="确认密码">
+                        <input type="date" class="form-control" name="birth" id="date" placeholder="确认密码">
                     </div>
                 </div>
                 <div class="form-group col-xs-12 col-sm-12">
@@ -114,8 +114,11 @@
 
 </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="https://code.jquery.com/jquery.js"></script>
+<!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/exit.js"></script>
+<script src="js/person.js"></script>
 <!-- 包括所有已编译的插件 -->
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
