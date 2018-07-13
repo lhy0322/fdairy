@@ -58,7 +58,6 @@ $(function(){
         rules:{
             oldPwd:{
                 required:true,
-                email:true
             },
             newPwd:{
                 required:true,
