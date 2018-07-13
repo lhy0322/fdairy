@@ -18,8 +18,8 @@ $(function(){
                     <label class="col-sm-11">
                         <input type="checkbox">
                         <div class="addre col-sm-12">
-                            <p class="col-sm-12"><em>[默认地址]</em><span class="addName">小煜幂</span> <span class="addPhone">15889230098</span></p>
-                            <p class="addAdd col-sm-9">湖南省湖南农业大学第十教学楼菜鸟驿站收</p>
+                            <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${data[i].username}</span> <span class="addPhone">${data[i].tel}</span></p>
+                            <p class="addAdd col-sm-9">${data[i].aress}</p>
                             <div class="col-sm-offset-10 col-sm-2">
                                 <button type="submit" class="person-delete btn btn-default btn-block">删除</button>
                             </div>
