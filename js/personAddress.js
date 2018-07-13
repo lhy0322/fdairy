@@ -29,7 +29,7 @@ $(function(){
                     $('#big-checkbox').prepend(html);
                 }
             }else{
-                console.log("aaaa")
+                console.log("aaaa");
                 $('#big-checkbox').empty()
             }
 
