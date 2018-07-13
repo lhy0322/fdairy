@@ -137,6 +137,28 @@
     background: none;
     box-shadow:none;
 }
+.person-delete{
+    background: #EA5200;
+    color: white;
+    margin-bottom: 20px
+}
+.person-delete:hover{
+    background: rgb(209, 75, 2);
+    color: white;
+    margin-bottom: 20px
+}
+
+input.error { border: 1px solid red; }
+label.error {
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #EA5200;
+}
+label.checked {
+    background:url("./demo/images/checked.gif") no-repeat 0px 0px;
+}
 /* .error {
     margin-top: 10px;
     padding-left: 16px;

@@ -10,14 +10,6 @@ $(function(){
     //session
     var userEmail = sessionStorage.getItem("email");
     console.log(userEmail);
-    // if(userEmail != undefined){
-    //     $("#name-name").html(userEmail);
-    //     $("#name").css("display","block");
-    //     $("#goin1").css("display","none");
-    //     $(".personal p").html(userEmail+"的小厨房");
-    // }else{
-    //     console.log("kong")
-    // }
     $("#personPwd").validate({
         debug: true, //调试模式取消submit的默认提交功能
         //errorClass: "label.error", //默认为错误的样式类为：error
