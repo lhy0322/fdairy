@@ -222,17 +222,17 @@ $(function(){
         submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form
             var oRegEmail = $('[name=regEmail]').val();
             var oRegPwd = $('[name=regPwd]').val();
-            var oEmailPwd =$('[name=EmailPwd]').val();
+            var oEmailYan =$('[name=emailYan]').val();
             console.log(oRegEmail);
             console.log(oRegPwd);
-            console.log(oEmailPwd);
+            console.log(oEmailYan);
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
                 url: "user/checkRegist.action",
                 data:({
                 	email:oRegEmail,
                     password:oRegPwd,
-                    code:oEmailPwd
+                    code:oEmailYan
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
@@ -272,8 +272,8 @@ $(function(){
                 required:true,
                 rangelength:[6,10]
             },
-            confirm_password:{
-                equalTo:"#pwd"
+            emailYan:{
+                required:true
             }
         },
         messages:{
@@ -285,8 +285,8 @@ $(function(){
                 required: "不能为空",
                 rangelength: "密码最小长度:6, 最大长度:10。"
             },
-            confirm_password:{
-                equalTo:"两次密码输入不一致"
+            emailYan:{
+                required:"必填"
             }
         },
 
@@ -378,6 +378,9 @@ $(function(){
             },
             confirm_pwd:{
                 equalTo:"#forgetpwd"
+            },
+            forgetYan:{
+                required:true,
             }
 
         },
@@ -392,7 +395,10 @@ $(function(){
             },
             confirm_pwd:{
                 equalTo:"两次密码输入不一致"
-            }
+            },
+            forgetYan:{
+                required:"必填"
+            },
 
         },
         // success: function(label) {
