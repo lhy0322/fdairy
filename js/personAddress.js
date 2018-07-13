@@ -55,12 +55,12 @@ $(function(){
             console.log(oAddress)
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
-                url: "user/checkLogin.action",
+                url: "user/checkAddAdress.action",
                 data:({
                     email:userEmail,
                     username:oName,
                     tel:oPhone,
-                    address:oAddress
+                    aress:oAddress
                 }),
                 dataType: "json",//数据类型是json
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
