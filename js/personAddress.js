@@ -3,7 +3,7 @@ $(function(){
 
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
-        url: "user/checkLogin.action",
+        url: "user/viewAdress.action",
         data:({
             email:userEmail
         }),
