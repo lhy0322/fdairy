@@ -9,10 +9,12 @@ $(function(){
         submitHandler: function(form){//表单提交句柄,为一回调函数，带一个参数：form
             var userEmail = sessionStorage.getItem("email");
             console.log(userEmail);  
+            var oPic = "";
         	var oNiName = $('[name=niName]').val();
             var oSex = $("input[type='radio']:checked").val();
             var oBirth = $('[name=birth]').val();
             console.log(oNiName)
+            console.log(oPic)
             console.log(oSex)
             console.log(oBirth)
             $.ajax({ //jQuery中的ajax方法
@@ -21,6 +23,7 @@ $(function(){
                 data:({
                     oEmail:userEmail,
                     user_name:oNiName,
+                    src:oPic,
                     sex:oSex,
                     brith:oBirth
                 }),
