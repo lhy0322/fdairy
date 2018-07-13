@@ -2,43 +2,48 @@ $(function(){
     var userEmail = sessionStorage.getItem("email");
     console.log(userEmail);
 
-    $.ajax({ //jQuery中的ajax方法
-        type: "POST",
-        url: "user/viewAdress.action",
-        data:({
-            email:userEmail
-        }),
-        dataType: "json",//数据类型是json
-        success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
-            console.log(data);
-            if(data != ''){
-                for(var i=0;i<data.length;i++){
-                    let html=
-                    `
-                    <label class="col-sm-11">
-                        <input type="checkbox">
-                        <div class="addre col-sm-12">
-                            <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${data[i].username}</span> <span class="addPhone">${data[i].tel}</span></p>
-                            <p class="addAdd col-sm-9">${data[i].aress}</p>
-                            <div class="col-sm-offset-10 col-sm-2">
-                                <button type="submit" class="person-delete btn btn-default btn-block">删除</button>
+    var addBox = function(){
+        $.ajax({ //jQuery中的ajax方法
+            type: "POST",
+            url: "user/viewAdress.action",
+            data:({
+                email:userEmail
+            }),
+            dataType: "json",//数据类型是json
+            success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+                console.log(data);
+                if(data != ''){
+                    $('#big-checkbox').empty();
+
+                    for(var i=0;i<data.length;i++){
+                        let html=
+                        `
+                        <label class="col-sm-11">
+                            <input type="checkbox">
+                            <div class="addre col-sm-12">
+                                <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${data[i].username}</span> <span class="addPhone">${data[i].tel}</span></p>
+                                <p class="addAdd col-sm-9">${data[i].aress}</p>
+                                <div class="col-sm-offset-10 col-sm-2">
+                                    <button type="button" class="person-delete btn btn-default btn-block" data="${data[i].a_id}">删除</button>
+                                </div>
                             </div>
-                        </div>
-                    </label>
-                    `
-                    $('#big-checkbox').prepend(html);
+                        </label>
+                        `
+                        $('#big-checkbox').prepend(html);
+                    }
+                }else{
+                    console.log("aaaa");
+                    $('#big-checkbox').empty()
                 }
-            }else{
-                console.log("aaaa");
-                $('#big-checkbox').empty()
-            }
-
-        },
-        error: function (jqXHR) {//失败后执行的方法。
-            console.log(jqXHR)
-        },
-    })
-
+    
+            },
+            error: function (jqXHR) {//失败后执行的方法。
+                console.log(jqXHR)
+            },
+        })
+    
+    }
+    addBox();
      // 地址的表单
      $("#addressFrom").validate({
         debug: true, //调试模式取消submit的默认提交功能
@@ -66,21 +71,23 @@ $(function(){
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
                     console.log(data);
                     if(data){
-                        let html=
-                        `
-                        <label class="col-sm-11">
-                            <input type="checkbox">
-                            <div class="addre col-sm-12">
-                                <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${oName}</span> <span class="addPhone">${oPhone}</span></p>
-                                <p class="addAdd col-sm-9">${oAddress}</p>
-                                <div class="col-sm-offset-10 col-sm-2">
-                                    <button type="submit" class="person-delete btn btn-default btn-block">删除</button>
-                                </div>
-                            </div>
-                        </label>
-                        `
-                        $('#big-checkbox').prepend(html);
+                        // let html=
+                        // `
+                        // <label class="col-sm-11">
+                        //     <input type="checkbox">
+                        //     <div class="addre col-sm-12">
+                        //         <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${oName}</span> <span class="addPhone">${oPhone}</span></p>
+                        //         <p class="addAdd col-sm-9">${oAddress}</p>
+                        //         <div class="col-sm-offset-10 col-sm-2">
+                        //             <button type="submit" class="person-delete btn btn-default btn-block">删除</button>
+                        //         </div>
+                        //     </div>
+                        // </label>
+                        // `
+                        // $('#big-checkbox').prepend(html);
 
+                        addBox();
+                        
                         $("input").val("");
                         $("label.error").css("display","none");
                     }
