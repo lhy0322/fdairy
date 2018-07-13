@@ -35,6 +35,28 @@ $(function(){
                     console.log("aaaa");
                     $('#big-checkbox').empty()
                 }
+                $('.person-delete').each(function(index,itme){
+                    $(itme).click(function(){
+                        var a_id = $(itme).attr('data');
+                        console.log(a_id);
+                        $.ajax({ //jQuery中的ajax方法
+                            type: "POST",
+                            url: "user/checkDelAdress.action",
+                            data:({
+                                id:a_id
+                            }),
+                            dataType: "json",//数据类型是json
+                            success: function (data) {
+                                if(data){
+                                    addBox();
+                                }
+                            },
+                            error:function(data){
+                                console.log(data)
+                            }
+                    })
+
+                })
     
             },
             error: function (jqXHR) {//失败后执行的方法。
@@ -71,23 +93,8 @@ $(function(){
                 success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
                     console.log(data);
                     if(data){
-                        // let html=
-                        // `
-                        // <label class="col-sm-11">
-                        //     <input type="checkbox">
-                        //     <div class="addre col-sm-12">
-                        //         <p class="col-sm-12"><em>[默认地址]</em><span class="addName">${oName}</span> <span class="addPhone">${oPhone}</span></p>
-                        //         <p class="addAdd col-sm-9">${oAddress}</p>
-                        //         <div class="col-sm-offset-10 col-sm-2">
-                        //             <button type="submit" class="person-delete btn btn-default btn-block">删除</button>
-                        //         </div>
-                        //     </div>
-                        // </label>
-                        // `
-                        // $('#big-checkbox').prepend(html);
-
                         addBox();
-                        
+
                         $("input").val("");
                         $("label.error").css("display","none");
                     }
