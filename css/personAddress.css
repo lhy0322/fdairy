@@ -118,3 +118,12 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/* ------------------------------------------------------------- */
+.exit,.goin1{
+    background: #C0AB84;
+    border: 1px solid #C0AB84;
+    padding: 5px 10px;
+    color: white;
+    margin-top: 8px;
+    /* margin-left: 15px; */
+}
