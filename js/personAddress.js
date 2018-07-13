@@ -1,6 +1,6 @@
 $(function(){
     var userEmail = sessionStorage.getItem("email");
-
+    console.log(userEmail);
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
         url: "user/viewAdress.action",
