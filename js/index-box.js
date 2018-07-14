@@ -27,7 +27,7 @@ $(function(){
                                 <img src="images/la.png" class="img-responsive">
                             </div>
                             <div class="shop">
-                                <strong class="color2 money">￥${data[i].ave_price}</strong>
+                                <strong class="color2 money">￥${data[i].avg_price}</strong>
                                 <small>已售
                                     <span>${data[i].sold}</span>
                                 </small>
