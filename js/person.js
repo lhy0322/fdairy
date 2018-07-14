@@ -32,6 +32,7 @@ $(function(){
                     console.log(data);
                     if(data){
                         $("input").val("");
+                        $(".tijiao").val("提交");
                         $("label.error").css("display","none");
                     }
                 },
