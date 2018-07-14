@@ -1,16 +1,5 @@
 $(function () {
 
-    $(function() {
-        var $container = $('#shopBox1');
-        $container.imagesLoaded(function() {
-            $container.shopBox1({
-                    itemSelector: '.new-box',
-                    gutter: 20,
-                    isAnimated: true,
-                });
-         });
-    });
-
     var userEmail = sessionStorage.getItem("email");
     console.log(userEmail);
     var shopbox1 = function (url, place) {
@@ -48,6 +37,14 @@ $(function () {
                         $(place).append(html)
                     }
                 }
+                var $container = $('#shopBox1');
+                $container.imagesLoaded(function() {
+                    $container.shopBox1({
+                            itemSelector: '.new-box',
+                            gutter: 20,
+                            isAnimated: true,
+                        });
+                 });
             },
             error: function (jqXHR) {//失败后执行的方法。
                 console.log(jqXHR)
