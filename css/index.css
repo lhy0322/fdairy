@@ -95,11 +95,10 @@ header4{
   .box {
     margin-bottom: 20px;
     float: left;
-    margin: 0 0;
     }
-    .box img {
+    /* .box img {
     max-width: 100%
-  }
+  } */
  .new-box:hover{
     background: #F8F8F8;
     cursor: pointer;
