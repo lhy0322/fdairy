@@ -38,7 +38,7 @@ $(function () {
                     }
 
                 }
-                var $container = $('#shopBox1');
+                var $container = $('#masonry');
                 $container.imagesLoaded(function() {
                     $container.masonry({
                             itemSelector: '.new-box',
@@ -177,9 +177,9 @@ $(function () {
         })
     }
 
-    shopbox1("shop/showShopTimeOne.action", '#shopBox1');
+    shopbox1("shop/showShopTimeOne.action", '#masonry');
     $("#more1").click(function () {
-        shopbox1("shop/showShopTimeTwo.action", '#shopBox1');
+        shopbox1("shop/showShopTimeTwo.action", '#masonry');
         $("#more1").css('display', 'none');
     })
 
