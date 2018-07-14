@@ -97,9 +97,13 @@ header4{
 .new-box .money{
     margin-top: 30px;
 }
+.new-box a{
+    text-decoration: none;
+    color: #333;
+}
 .new-box .shop{
     position: relative;
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .foot{
@@ -223,4 +227,14 @@ label.error {
 }
 label.checked {
     background:url("./demo/images/checked.gif") no-repeat 0px 0px;
+}
+.la span{
+    padding: 6px 0;
+    font-size: 13px;
+    float: left;
+    margin-right: 10px;
+}
+.la img{
+    width: 30px;
+    margin-left: 20px;
 }
