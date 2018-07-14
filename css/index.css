@@ -89,16 +89,16 @@ header4{
     /*background: #C23415;*/
 }
 .container-fluid {
-    padding: 20px;
+    /* padding: 20px; */
 }
-  .box {
+  /* .box {
     margin-bottom: 20px;
     float: left;
     width: 220px;
     }
     .box img {
     max-width: 100%
-  }
+  } */
  .new-box:hover{
     background: #F8F8F8;
     cursor: pointer;
