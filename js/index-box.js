@@ -19,7 +19,7 @@ $(function(){
                     <div class="col-xs-6 col-sm-3">
                     <div class="new-box">
                         <a href="main.html">
-                            <img src="${data[i].shop_img}" class="img-responsive" alt="Responsive image">
+                            <img src="${data[i].shop_img}" class="img-responsive images" alt="Responsive image">
                             <h5>${data[i].shop_name}</h5>
                             <small>新店开张，送代金券哦</small>
                             <div class="la">
