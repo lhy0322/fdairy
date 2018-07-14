@@ -14,7 +14,7 @@ $(function () {
                     for (var i = 0; i < data.length; i++) {
                         let html =
                             `
-                    <div class="col-xs-6 col-sm-3">
+                    <div class="col-xs-6 col-sm-3 box">
                     <div class="new-box">
                         <a href="main.html?shopId=${data[i].shop_id}">
                             <img src="${data[i].shop_img}" class="img-responsive images" alt="Responsive image">
@@ -38,10 +38,10 @@ $(function () {
                     }
 
                 }
-                var $container = $('#masonry');
+                var $container = $('#shopBox1');
                 $container.imagesLoaded(function() {
-                    $container.masonry({
-                            itemSelector: '.new-box',
+                    $container.shopBox1({
+                            itemSelector: '.box',
                             gutter: 20,
                             isAnimated: true,
                         });
@@ -177,9 +177,9 @@ $(function () {
         })
     }
 
-    shopbox1("shop/showShopTimeOne.action", '#masonry');
+    shopbox1("shop/showShopTimeOne.action", '#shopBox1');
     $("#more1").click(function () {
-        shopbox1("shop/showShopTimeTwo.action", '#masonry');
+        shopbox1("shop/showShopTimeTwo.action", '#shopBox1');
         $("#more1").css('display', 'none');
     })
 
