@@ -40,7 +40,7 @@ $(function () {
                 }
                 var $container = $('#shopBox1');
                 $container.imagesLoaded(function() {
-                    $container.shopBox1({
+                    $container.masonry({
                             itemSelector: '.box',
                             gutter: 20,
                             isAnimated: true,
