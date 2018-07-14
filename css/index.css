@@ -92,14 +92,14 @@ header4{
     /* padding: 20px; */
     margin-top: 50px
 }
-  /* .box {
+  .box {
     margin-bottom: 20px;
     float: left;
-    width: 220px;
+    margin: 0 0
     }
     .box img {
     max-width: 100%
-  } */
+  }
  .new-box:hover{
     background: #F8F8F8;
     cursor: pointer;
