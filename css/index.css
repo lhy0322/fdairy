@@ -76,6 +76,8 @@ header4{
     font-size: 20px;
 }
 .new-box{
+    /* margin-bottom: 20px; */
+    float: left;
     position: relative;
     border-right: 1px solid #f1f1f1;
     border-bottom: 1px solid #f1f1f1;
@@ -240,3 +242,17 @@ label.error {
 label.checked {
     background:url("./demo/images/checked.gif") no-repeat 0px 0px;
 }
+
+
+
+.container-fluid {
+    padding: 20px;
+    }
+  .box {
+    margin-bottom: 20px;
+    float: left;
+    width: 220px;
+    }
+    .box img {
+    max-width: 100%
+  }

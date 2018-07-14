@@ -1,5 +1,16 @@
 $(function () {
 
+    $(function() {
+        var $container = $('#shopBox1');
+        $container.imagesLoaded(function() {
+            $container.shopBox1({
+                    itemSelector: '.new-box',
+                    gutter: 20,
+                    isAnimated: true,
+                });
+         });
+    });
+
     var userEmail = sessionStorage.getItem("email");
     console.log(userEmail);
     var shopbox1 = function (url, place) {
