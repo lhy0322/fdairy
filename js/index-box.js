@@ -42,7 +42,7 @@ $(function () {
                 $container.imagesLoaded(function() {
                     $container.masonry({
                             itemSelector: '.box',
-                            gutter: 20,
+                            gutter: 10,
                             isAnimated: true,
                         });
                  });
