@@ -87,25 +87,35 @@ header4{
     /*background: #C23415;*/
 }
 
-.new-box:hover{
+#shopBox1 .new-box:hover{
     background: #F8F8F8;
     cursor: pointer;
     box-shadow: 2px 2px 3px #cccccc;
 }
-.new-box img{
+#shopBox1 .new-box img{
     /*margin: 10px auto;*/
 }
-.new-box .money{
+#shopBox1 .new-box .money{
     margin-top: 30px;
 }
-.new-box a{
+#shopBox1 .new-box a{
     text-decoration: none;
     color: #333;
 }
-.new-box .shop{
+#shopBox1 .new-box .shop{
     position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+#shopBox1 .la span{
+    padding: 6px 0;
+    font-size: 13px;
+    float: left;
+    margin-right: 10px;
+}
+#shopBox1 .la img{
+    width: 30px;
+    margin-left: 20px;
 }
 .foot{
     padding-top: 20px;
@@ -228,14 +238,4 @@ label.error {
 }
 label.checked {
     background:url("./demo/images/checked.gif") no-repeat 0px 0px;
-}
-.la span{
-    padding: 6px 0;
-    font-size: 13px;
-    float: left;
-    margin-right: 10px;
-}
-.la img{
-    width: 30px;
-    margin-left: 20px;
 }
