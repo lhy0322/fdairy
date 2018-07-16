@@ -43,7 +43,7 @@ $(function () {
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
-                            sm: 4s,
+                            sm: 4,
                             xs: 6
                           },
                           distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, 
