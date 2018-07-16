@@ -29,7 +29,7 @@ $(function () {
             </div>
             <div class="col-xs-12 col-sm-8">
                 <h4 class="xiangqing1"><strong>${data.shop_name}</strong></h4>
-                <h6 class="xiangqing">人均：<span class="money">￥${data.avg_price}</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                <h6 class="xiangqing">人均：<span class="money">￥${data.ave_price}</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
                 <h5 class="xiangqing">综合评价 <span>${data.level}分</span></h5>
                 <h5 class="xiangqing">店铺地址：<span>${data.address}</span></h5>
                 <h5 class="xiangqing">配送速度 <span>${data.s_time}分钟</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="slow">慢</span> &nbsp;&nbsp;&nbsp;<span class="fast">中</span> &nbsp;&nbsp;&nbsp;<span class="slow">快</span></h5>
