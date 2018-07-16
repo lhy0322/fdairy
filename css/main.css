@@ -245,3 +245,6 @@ label.error {
 label.checked {
     background:url("./demo/images/checked.gif") no-repeat 0px 0px;
 }
+.header2{
+    background: #D78F6D;
+}
