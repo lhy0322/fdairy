@@ -170,9 +170,9 @@ $(function () {
         })
     }
 
-    shopbox1("shop/showShopTimeOne.action", '#shopBox1 .row');
+    shopbox1("shop/showShopTimeOne.action", '#shopBox1');
     $("#more1").click(function () {
-        shopbox1("shop/showShopTimeTwo.action", '#shopBox1 .row');
+        shopbox1("shop/showShopTimeTwo.action", '#shopBox1');
         $("#more1").css('display', 'none');
     })
 
