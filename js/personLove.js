@@ -11,6 +11,7 @@ $(function(){
             },
             dataType: "json",//数据类型是json
             success: function (data) {
+                $('#lovebox').empty();
                 console.log(data);
                 for(var i=0;i<data.length;i++){
                     if(data[i].food_img == null){
