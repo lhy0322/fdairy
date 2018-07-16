@@ -170,3 +170,78 @@ h3 strong{
 .modal-body div img{
     margin: 0 auto;
 }
+/* ------------------------------------------------------------------- */
+.goLogin{
+    display: block;
+}
+.goLogin-bottom{
+    display: block;
+}
+.goregst{
+    display: none;
+}
+.goregst-bottom{
+    display: none;
+}
+.ok{
+    display: none;
+}
+.goForget{
+    display: none;
+}
+.exit,.goin1{
+    background: #C0AB84;
+    border: 1px solid #C0AB84;
+    padding: 5px 10px;
+    color: white;
+    margin-top: 8px;
+    /* margin-left: 15px; */
+}
+.valid{
+    margin-top: 10px;
+    padding-left: 16px;
+
+    padding-bottom: 2px;
+
+    font-weight: bold;
+    color: green;
+}
+.exit-text{
+    font-size: 20px;
+    padding: 30px 30px;
+    text-align: center;
+}
+#name{
+    display: none;
+    margin-left: 0;
+}
+#goin1{
+    display: block;
+}
+#forgetRegist,#cuowuYan,#misYan,#hasRegist,#mis{
+    display: none;
+}
+/* .yanzhen{
+    float: right;
+    margin-right: 20px
+} */
+
+.error {
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #EA5200;
+}
+
+input.error { border: 1px solid red; }
+label.error {
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #EA5200;
+}
+label.checked {
+    background:url("./demo/images/checked.gif") no-repeat 0px 0px;
+}
