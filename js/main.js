@@ -43,6 +43,7 @@ $(function () {
             console.log(jqXHR)
         },
     })
+    
     //菜色
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
@@ -57,6 +58,7 @@ $(function () {
                 if(data[i].food_img == null){
                     data[i].food_img="images/no_pic.png";
                 }
+
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
@@ -83,6 +85,10 @@ $(function () {
         },
     })
     //评论
+    //时间戳转日期格式
+    function getLocalTime(nS) {   
+        return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');   
+     }  
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
         url: "shop/showComment.action",
@@ -93,6 +99,7 @@ $(function () {
         success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
             console.log(data);
             for(var i=0;i<data.length;i++){
+                data[i].create_time = getLocalTime(data[i].create_time);
                 
                 let html = 
                 `
