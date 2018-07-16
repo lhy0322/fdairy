@@ -43,8 +43,8 @@ $(function () {
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
-                            sm: 6,
-                            xs: 12
+                            sm: 4s,
+                            xs: 6
                           },
                           distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, 
                           onload: function (items) {
@@ -98,8 +98,8 @@ $(function () {
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
-                            sm: 6,
-                            xs: 12
+                            sm: 4,
+                            xs: 6
                           },
                           distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, 
                           onload: function (items) {
@@ -153,8 +153,8 @@ $(function () {
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
-                            sm: 6,
-                            xs: 12
+                            sm: 4,
+                            xs: 6
                           },
                           distributeBy: { order: false, height: false, attr: 'data-order', attrOrder: 'asc' }, 
                           onload: function (items) {
