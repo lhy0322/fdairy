@@ -49,6 +49,7 @@ $(function(){
                             dataType: "json",//数据类型是json
                             success: function (data) {
                                 console.log(data);
+                                alert("删除成功！")
                                 oLove();
                             },
                             error:function(error){
