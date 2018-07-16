@@ -10,7 +10,7 @@ $(function () {
     console.log(shopId);
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
-        url: url,
+        url: "shop/checkShop.action",
         data:{
             shop_id:shopId
         },
