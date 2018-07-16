@@ -43,50 +43,7 @@ $("#zhaohui").click(function(){
     $("input").val("");
     $("label.error").css("display","none");
 });
-//确认密码
-$("#back").click(function(){
-
-    // $(".goLogin-bottom").show();
-    // $(".goLogin").show();
-    // $(".goregst").hide();
-    // $(".goregst-bottom").hide();
-    // $(".goForget").hide();
-    // $(".ok").hide();
-    // $("input").val("");
-    // $("label.error").css("display","none");
-
-    // $(".goLogin-bottom").hide();
-    // $(".goLogin").hide();
-    // $(".goForget").hide();
-    // $(".ok").show();
-    // $(".goregst").hide();
-    // $(".goregst-bottom").hide();
-});
-// //确认密码之后去登录
-// $("#denglu").click(function(){
-//     $(".goLogin-bottom").show();
-//     $(".goLogin").show();
-//     $(".goregst").hide();
-//     $(".goregst-bottom").hide();
-//     $(".goForget").hide();
-//     $(".ok").hide();
-// });
 // --------------------------------------------------------------------------------------------
-// $(document).ready(function(){
-//     $("#loginForm").validate({
-//         rules:{
-//             email:{
-//                 required:true,
-//                 email:true
-//             },
-//             url:"url",
-//             comment:"required",
-//             valcode: {
-//                 formula: "7+9"
-//             }
-//         }
-//     });
-// });
 $(function(){
     //退出
     $(".ok-exit").click(function(){
