@@ -42,7 +42,7 @@ $(function () {
             $('.main').append(html);
 
             $('.btn-2').click(function(){
-                if(userEmail == null){
+                if(userEmail == ''){
                     alert("请先登录");   
                 }else{
                     $.ajax({ //jQuery中的ajax方法
