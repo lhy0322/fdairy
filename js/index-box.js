@@ -34,7 +34,7 @@ $(function () {
                         </a>
                     </div>
                     `
-                        $(place).append($(html).attr("style",""))
+                        $(place).append(html)
                     }
                     $("#shopBox1").mpmansory(
                         {
