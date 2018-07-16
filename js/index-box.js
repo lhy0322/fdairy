@@ -25,7 +25,7 @@ $(function () {
                                 <img src="images/la.png" class="img-responsive">
                             </div>
                             <div class="shop">
-                                <strong class="color2 money">￥${data[i].avg_price}</strong>
+                                <strong class="color2 money">￥${data[i].ave_price}</strong>
                                 <small>已售 
                                     <span> ${data[i].sold}</span>
                                 </small>
@@ -75,7 +75,7 @@ $(function () {
                             <span> ${data[i].s_time}分钟</span>
                         </h6>
                         <div class="shop">
-                            <strong class="color2 money">￥${data[i].avg_price}</strong>
+                            <strong class="color2 money">￥${data[i].ave_price}</strong>
                             <small>已售
                                 <span> ${data[i].sold}</span>
                             </small>
@@ -117,7 +117,7 @@ $(function () {
                             <span> ${data[i].s_time}分钟</span>
                         </h6>
                         <div class="shop">
-                            <strong class="color2 money">￥${data[i].avg_price}</strong>
+                            <strong class="color2 money">￥${data[i].ave_price}</strong>
                             <small>已售
                                 <span> ${data[i].sold}</span>
                             </small>
@@ -158,7 +158,7 @@ $(function () {
                             <span> ${data[i].level}分</span>
                         </h6>
                         <div class="shop">
-                            <strong class="color2 money">￥${data[i].avg_price}</strong>
+                            <strong class="color2 money">￥${data[i].ave_price}</strong>
                             <small>已售
                                 <span> ${data[i].sold}</span>
                             </small>
