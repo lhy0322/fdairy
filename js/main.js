@@ -86,6 +86,7 @@ $(function () {
     })
     //评论
     //时间戳转日期格式
+    
     function getLocalTime(nS) {   
         return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');   
      }  
@@ -99,8 +100,32 @@ $(function () {
         success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
             console.log(data);
             for(var i=0;i<data.length;i++){
-                data[i].create_time = getLocalTime(data[i].create_time);
+                // data[i].create_time = getLocalTime(data[i].create_time);
+
                 
+                function formatDate(date) {
+                    dates = date.split("/");
+                    if(dates.length == 3) {
+                        if(dates[1].length == 1) {
+                            dates[1] = "0" + dates[1];
+                        }
+                        if (dates[2].length == 1) {
+                            dates[2] = "0" + dates[2];
+                        }
+                        date = dates.join("-");
+                        return date;
+                    } else {
+                        return null;
+                    }
+                }
+                function parseTime(timestamp) {
+                    var date = new Date(parseInt(timestamp)).toLocaleDateString();
+                　　//输出结果为2016/8/9
+                    date = formatDate(date);
+                　　//输出结果为2016-08-09，满足YYYY-MM-DD格式要求
+                    return date;
+                }
+                data[i].create_time = formatDate(data[i].create_time);
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
@@ -111,7 +136,7 @@ $(function () {
                 </div>
                 <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
                     <p class="col-xs-9 col-sm-offset-0 col-sm-12">${data[i].create_time}</p>
-                    <!- <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>-->
+                    <!- <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p> -->
                 </div>
             </div>
                 `
