@@ -37,7 +37,7 @@ $(function () {
             </div>
         </div>
             `
-            $('main').append(html)
+            $('.main').append(html)
         },
         error: function (jqXHR) {//失败后执行的方法。
             console.log(jqXHR)
