@@ -27,8 +27,8 @@ $(function () {
                     email:userEmail
                 },
                 dataType: "json",//数据类型是json
-                success: function (data) {
-                    if(data){
+                success: function (talk) {
+                    if(talk){
                         let html = 
                         `
                         <div class="row">
@@ -100,7 +100,8 @@ $(function () {
                         })
                     }
                 },
-                error:function(data){
+                error:function(talk){
+                    console.log(talk);
 
                 }
             })//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
