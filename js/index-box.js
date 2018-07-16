@@ -73,7 +73,7 @@ $(function () {
                         let html =
                             `
 
-                    <div class="col-xs-6 col-sm-3 box item">
+                    <div class="item">
                     <div class="new-box">
                     <a href="main.html?shopId=${data[i].shop_id}">
                         <img src="${data[i].shop_img}" class="img-responsive" alt="Responsive image">
