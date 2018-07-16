@@ -44,4 +44,37 @@ $(function () {
         },
     })
 
+    $.ajax({ //jQuery中的ajax方法
+        type: "POST",
+        url: "shop/showFood.action",
+        data:{
+            shop_id:shopId
+        },
+        dataType: "json",//数据类型是json
+        success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+            console.log(data);
+            for(var i=0;i<data.length;i++){
+                let html = 
+                `
+                <div class="food-box col-xs-12 col-sm-12">
+                <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                <div class="shopping col-xs-8 col-sm-9">
+                    <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
+                    <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                    <h5>美味快餐：<span>送10元代金券</span></h5>
+                    <h5>综合评价 <span>4.6分</span></h5>
+                    <h5>配送速度 <span>36分钟</span></h5>
+                    <button type="button" class="btn  btn-danger">加入订单</button>
+                </div>
+            </div>
+                `
+                $('#oFood').append(html)
+            }
+           
+        },
+        error: function (jqXHR) {//失败后执行的方法。
+            console.log(jqXHR)
+        },
+    })
+
 })
