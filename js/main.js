@@ -123,7 +123,7 @@ $(function () {
             console.log(data);
             for(var i=0;i<data.length;i++){
                 // data[i].create_time = getLocalTime(data[i].create_time);
-
+                console.log(typeof data[i].create_time)
                 data[i].create_time = formatDate(data[i].create_time);
                 let html = 
                 `
