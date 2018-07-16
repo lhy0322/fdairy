@@ -177,6 +177,9 @@ header4{
     margin-top: 10px;
 }
 /*------------------------------------------------------------------------------------*/
+#shopBox1 .row{
+    position: relative;
+}
 .goLogin{
     display: block;
 }
