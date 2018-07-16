@@ -43,7 +43,7 @@ $(function () {
                     $container.masonry({
                             itemSelector: '.box',
                             gutter: 0,
-                            isAnimated: true,
+                            isAnimated: flase,
                         });
                  });
             },
