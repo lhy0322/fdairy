@@ -54,7 +54,7 @@ $(function () {
         success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
             console.log(data);
             for(var i=0;i<data.length;i++){
-                if(data[i].food_img == ''){
+                if(data[i].food_img == null){
                     data[i].food_img="images/no_pic.png";
                 }
                 let html = 
