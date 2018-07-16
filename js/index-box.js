@@ -12,10 +12,11 @@ $(function () {
                 console.log(data);
                 if (data != '') {
                     for (var i = 0; i < data.length; i++) {
+                        // <div class="col-xs-6 col-sm-3 box item">
                         let html =
                             `
-                    <div class="col-xs-6 col-sm-3 box item">
-                    <div class="new-box">
+                    
+                    <div class="new-box item">
                         <a href="main.html?shopId=${data[i].shop_id}">
                             <img src="${data[i].shop_img}" class="img-responsive images" alt="Responsive image">
                             <h5>${data[i].shop_name}</h5>
@@ -32,14 +33,13 @@ $(function () {
                             </div>
                         </a>
                     </div>
-                </div>
                     `
                         $(place).append($(html).attr("style",""))
                     }
                     $("#shopBox2").mpmansory(
                         {
-                          childrenClass: '', // default is a div
-                          columnClasses: '', //add classes to items
+                          childrenClass: 'item', // default is a div
+                          columnClasses: 'padding', //add classes to items
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
@@ -72,9 +72,7 @@ $(function () {
                     for (var i = 0; i < data.length; i++) {
                         let html =
                             `
-
-                    <div class="item">
-                    <div class="new-box">
+                    <div class="new-box item">
                     <a href="main.html?shopId=${data[i].shop_id}">
                         <img src="${data[i].shop_img}" class="img-responsive" alt="Responsive image">
                         <h5>${data[i].shop_name}</h5>
@@ -90,14 +88,13 @@ $(function () {
                         </div>
                     </a>
                     </div>
-                    </div>
                     `
                         $(place).append(html)
                     }
                     $("#shopBox2").mpmansory(
                         {
-                          childrenClass: '', // default is a div
-                          columnClasses: '', //add classes to items
+                          childrenClass: 'item', // default is a div
+                          columnClasses: 'padding', //add classes to items
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
@@ -129,8 +126,7 @@ $(function () {
                     for (var i = 0; i < data.length; i++) {
                         let html =
                             `
-                    <div class="col-xs-6 col-sm-3 box item">
-                    <div class="new-box">
+                    <div class="new-box item">
                     <a href="main.html?shopId=${data[i].shop_id}">
                         <img src="${data[i].shop_img}" class="img-responsive" alt="Responsive image">
                         <h5>${data[i].shop_name}</h5>
@@ -152,8 +148,8 @@ $(function () {
                     }
                     $("#shopBox2").mpmansory(
                         {
-                          childrenClass: '', // default is a div
-                          columnClasses: '', //add classes to items
+                          childrenClass: 'item', // default is a div
+                          columnClasses: 'padding', //add classes to items
                           breakpoints:{
                             lg: 3, 
                             md: 4, 
