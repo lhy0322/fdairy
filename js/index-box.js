@@ -177,9 +177,9 @@ $(function () {
         })
     }
 
-    shopbox1("shop/showShopTimeOne.action", '#shopBox1');
+    shopbox1("shop/showShopTimeOne.action", '#shopBox1 .row');
     $("#more1").click(function () {
-        shopbox1("shop/showShopTimeTwo.action", '#shopBox1');
+        shopbox1("shop/showShopTimeTwo.action", '#shopBox1 .row');
         $("#more1").css('display', 'none');
     })
 
