@@ -36,7 +36,7 @@ $(function () {
                     `
                         $(place).append($(html).attr("style",""))
                     }
-                    $("#shopBox2").mpmansory(
+                    $("#shopBox1").mpmansory(
                         {
                           childrenClass: 'item', // default is a div
                           columnClasses: 'padding', //add classes to items
@@ -146,7 +146,7 @@ $(function () {
                     `
                         $(place).append(html)
                     }
-                    $("#shopBox2").mpmansory(
+                    $("#shopBox3").mpmansory(
                         {
                           childrenClass: 'item', // default is a div
                           columnClasses: 'padding', //add classes to items
