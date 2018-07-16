@@ -6,7 +6,7 @@ $(function () {
         if (r != null) return unescape(r[2]); return null;
     }
 
-    var shopId = GetQueryString(shopId);
+    var shopId = GetQueryString("shopId");
     console.log(shopId);
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
