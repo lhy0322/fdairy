@@ -21,7 +21,7 @@ $(function () {
             console.log(data);
             $.ajax({ //jQuery中的ajax方法
                 type: "POST",
-                url: "shop/isLove.action",
+                url: "user/isLove.action",
                 data:{
                     shop_id:shopId,
                     email:userEmail
@@ -72,7 +72,7 @@ $(function () {
                     </div>
                         `
                         $('.main').append(html);
-                        
+
                         $('.btn-2').click(function(){
                             if(userEmail == ''){
                                 alert("请先登录");   
