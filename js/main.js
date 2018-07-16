@@ -57,13 +57,16 @@ $(function () {
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
-                <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                <img alt="Responsive image" class="col-xs-4 col-sm-3 img-responsive" src="${data[i].food_img}" alt="">
                 <div class="shopping col-xs-8 col-sm-9">
-                    <h4><strong>花妹妹煲仔饭</strong> <small> 月售11102</small></h4>
-                    <h6>人均：<span class="money">￥14</span> | 起送：<span>10元</span> | 配送：<span>1元</span></h6>
+                    <h4><strong>${data[i].food_name}</strong></h4>
                     <h5>美味快餐：<span>送10元代金券</span></h5>
-                    <h5>综合评价 <span>4.6分</span></h5>
-                    <h5>配送速度 <span>36分钟</span></h5>
+                    <div class="shop">
+                    <strong class="color2 money">￥${data[i].now_price}</strong>
+                    <small>已售
+                        <span>${data[i].sold_count}</span>
+                    </small>
+                </div>
                     <button type="button" class="btn  btn-danger">加入订单</button>
                 </div>
             </div>
