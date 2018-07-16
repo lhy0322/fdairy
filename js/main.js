@@ -87,31 +87,31 @@ $(function () {
     //评论
     //时间戳转日期格式
     
-    function getLocalTime(nS) {   
-        return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');   
-     }  
-     function formatDate(date) {
-        dates = date.split("/");
-        if(dates.length == 3) {
-            if(dates[1].length == 1) {
-                dates[1] = "0" + dates[1];
-            }
-            if (dates[2].length == 1) {
-                dates[2] = "0" + dates[2];
-            }
-            date = dates.join("-");
-            return date;
-        } else {
-            return null;
-        }
-    }
-    function parseTime(timestamp) {
-        var date = new Date(parseInt(timestamp)).toLocaleDateString();
-    　　//输出结果为2016/8/9
-        date = formatDate(date);
-    　　//输出结果为2016-08-09，满足YYYY-MM-DD格式要求
-        return date;
-    }
+    // function getLocalTime(nS) {   
+    //     return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');   
+    //  }  
+    //  function formatDate(date) {
+    //     dates = date.split("/");
+    //     if(dates.length == 3) {
+    //         if(dates[1].length == 1) {
+    //             dates[1] = "0" + dates[1];
+    //         }
+    //         if (dates[2].length == 1) {
+    //             dates[2] = "0" + dates[2];
+    //         }
+    //         date = dates.join("-");
+    //         return date;
+    //     } else {
+    //         return null;
+    //     }
+    // }
+    // function parseTime(timestamp) {
+    //     var date = new Date(parseInt(timestamp)).toLocaleDateString();
+    // 　　//输出结果为2016/8/9
+    //     date = formatDate(date);
+    // 　　//输出结果为2016-08-09，满足YYYY-MM-DD格式要求
+    //     return date;
+    // }
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
         url: "shop/showComment.action",
@@ -124,7 +124,8 @@ $(function () {
             for(var i=0;i<data.length;i++){
                 // data[i].create_time = getLocalTime(data[i].create_time);
                 console.log(typeof data[i].create_time)
-                data[i].create_time = formatDate(data[i].create_time);
+                data[i].create_time = new Date(parseInt(data[i].create_time)).toLocaleDateString();
+                
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
