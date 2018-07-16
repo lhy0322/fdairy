@@ -47,7 +47,7 @@ $(function () {
                 }else{
                     $.ajax({ //jQuery中的ajax方法
                         type: "POST",
-                        url: "shop/checkAddLove.action",
+                        url: "user/checkAddLove.action",
                         data:{
                             shop_id:shopId,
                             email:userEmail
