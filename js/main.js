@@ -123,7 +123,6 @@ $(function () {
             console.log(data);
             for(var i=0;i<data.length;i++){
                 // data[i].create_time = getLocalTime(data[i].create_time);
-                console.log(typeof data[i].create_time)
                 data[i].create_time = new Date(parseInt(data[i].create_time)).toLocaleDateString();
                 
                 let html = 
@@ -136,11 +135,11 @@ $(function () {
                 </div>
                 <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
                     <p class="col-xs-9 col-sm-offset-0 col-sm-12">${data[i].create_time}</p>
-                    <!- <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p> -->
                 </div>
             </div>
                 `
                 $('#talk').append(html)
+                // <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p> 
             }
            
         },
