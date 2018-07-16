@@ -79,5 +79,37 @@ $(function () {
             console.log(jqXHR)
         },
     })
+    $.ajax({ //jQuery中的ajax方法
+        type: "POST",
+        url: "shop/showComment.action",
+        data:{
+            shop_id:shopId
+        },
+        dataType: "json",//数据类型是json
+        success: function (data) {//如果成功获得了值执行的方法，目的是为了让用户知道执行的操作成功了。
+            console.log(data);
+            for(var i=0;i<data.length;i++){
+                let html = 
+                `
+                <div class="food-box col-xs-12 col-sm-12">
+                <img alt="Responsive image" class="col-xs-3 col-sm-1 img-responsive" src="images/name.jpg" alt="">
+                <div class="shopping col-xs-9 col-sm-9">
+                    <p>阿珍me</p>
+                    <p>口味不错，服务挺好的，下次还要来</p>
+                </div>
+                <div class="shopping col-xs-offset-5  col-sm-offset-0 col-xs-7 col-sm-2">
+                    <p class="col-xs-9 col-sm-offset-0 col-sm-12">2018-01-01</p>
+                    <p class="col-xs-2 col-sm-12 good"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </p>
+                </div>
+            </div>
+                `
+                $('#talk').append(html)
+            }
+           
+        },
+        error: function (jqXHR) {//失败后执行的方法。
+            console.log(jqXHR)
+        },
+    })
 
 })
