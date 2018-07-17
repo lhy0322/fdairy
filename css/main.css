@@ -248,3 +248,7 @@ label.checked {
 .header2{
     background: #D78F6D;
 }
+#oSearch:hover{
+    background: #B15546;
+    color: white;
+}

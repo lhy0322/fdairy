@@ -114,7 +114,10 @@ ul{
     /*padding-right: 0;*/
     /*padding-left: 0;*/
 /*}*/
-
+#oSearch:hover{
+    background: #B15546;
+    color: white;
+}
 .food-box a{
     text-decoration: none;
     color: #333;
