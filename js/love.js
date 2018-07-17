@@ -36,22 +36,22 @@ $(function () {
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
-                <img alt="Responsive image" class="col-xs-3 col-sm-3 img-responsive" src="images/pic4.png" alt="">
+                <img alt="Responsive image" class="col-xs-3 col-sm-3 img-responsive" src="${data[i].shop_img}" alt="">
                 <div class="col-xs-9 col-sm-9">
                     <h4>
                         <strong>${data[i].shop_name}</strong>
                         <small>月售 ${data[i].sold}</small>
                     </h4>
                     <h6>人均：
-                        <span class="money">￥${data[i].money}</span> | 起送：
+                        <span class="money">￥${data[i].ave_price}</span> | 起送：
                         <span>10元</span> | 配送：
                         <span>1元</span>
                     </h6>
-                    <h5>美味快餐：
-                        <span>送10元代金券</span>
+                    <h5>店铺地址
+                        <span>${data[i].address}</span>
                     </h5>
                     <h5>综合评价
-                        <span class="color5">4.6分</span>
+                        <span class="color5">${data[i].level}分</span>
                     </h5>
                     <h5>配送速度
                         <span class="color2">36分钟</span>
