@@ -119,7 +119,13 @@ ul{
     text-decoration: none;
     color: #333;
 }
-
+.no{ 
+    display: none;
+    text-align: center;
+}
+.fenye{
+    display: block;
+}
 
 .goLogin{
     display: block;
