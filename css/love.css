@@ -157,6 +157,11 @@ ul{
     margin-right: 20px
 } */
 
+.btn-block {
+    color: #ffffff;
+    background: #C23415;
+    border-color: #C23415;
+}
 .error {
     margin-top: 10px;
     padding-left: 16px;
