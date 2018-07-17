@@ -9,7 +9,8 @@ $(function () {
     var userEmail = sessionStorage.getItem("email");
     var shopId = GetQueryString("shopId");
     console.log(shopId);
-   
+    console.log(userEmail);
+
     $.ajax({ //jQuery中的ajax方法
         type: "POST",
         url: "shop/checkShop.action",
@@ -18,7 +19,7 @@ $(function () {
         },
         dataType: "json",//数据类型是json
         success: function (data) {
-            if(userEmail != ''){
+            if(userEmail != null){
                 $.ajax({ //jQuery中的ajax方法
                     type: "POST",
                     url: "user/isLove.action",
