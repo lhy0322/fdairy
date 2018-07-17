@@ -65,7 +65,7 @@ $(function () {
                 </div>
             </div>
                 `
-                $('.food-show').append(html);
+                $('#show_box').append(html);
             }
         },
         error:function(error){
