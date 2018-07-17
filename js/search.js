@@ -2,7 +2,7 @@ $(function(){
     var sousu = $('.search').val()
     console.log(sousu);
 
-    $('#search').click(function(){
+    $('#oSearch').click(function(){
         $.ajax({ //jQuery中的ajax方法
             type: "POST",
             url: "shop/queryShopByLike.action",
