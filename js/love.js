@@ -36,6 +36,7 @@ $(function () {
                 let html = 
                 `
                 <div class="food-box col-xs-12 col-sm-12">
+                <a href="main.html?shopId=${data[i].shop_id}">
                 <img alt="Responsive image" class="col-xs-3 col-sm-3 img-responsive" src="${data[i].shop_img}" alt="">
                 <div class="col-xs-9 col-sm-9">
                     <h4>
@@ -63,6 +64,7 @@ $(function () {
                         <span class="color2">收费停车</span>
                     </h5>
                 </div>
+                </a>
             </div>
                 `
                 $('#show_box').append(html);
