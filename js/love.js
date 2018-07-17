@@ -27,7 +27,7 @@ $(function () {
     if(oFen == ''){
         $.ajax({ //jQuery中的ajax方法
             type: "POST",
-            url: "shop/queryClassify.action",
+            url: "shop/showRandShop.action",
             dataType: "json",//数据类型是json
             success: function (data) {
                 $('#show_box').empty();
