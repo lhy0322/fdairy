@@ -1,8 +1,8 @@
 $(function(){
-    var sousu = $('.search').val()
-    console.log(sousu);
-
+    
     $('#oSearch').click(function(){
+        var sousu = $('.search').val()
+        console.log(sousu);
         $('#oSearch').css({
             'background':'#B15546',
             'color':'#fff'

@@ -21,3 +21,7 @@
 .forget{
     float: right;
 }
+#oSearch:hover{
+    background: #B15546;
+    color: white;
+}
