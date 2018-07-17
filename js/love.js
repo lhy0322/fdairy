@@ -9,7 +9,7 @@ $(function () {
     var oFen = '';
     console.log(fen);
     if(fen == "0"){
-        oFen = '生鲜蔬果'
+        oFen = '生鲜果蔬'
     }else if(fen == "1"){
         oFen = '汉堡披萨'
     }else if(fen == "2"){
