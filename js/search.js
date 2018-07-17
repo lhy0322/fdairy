@@ -3,6 +3,10 @@ $(function(){
     console.log(sousu);
 
     $('#oSearch').click(function(){
+        $('#oSearch').css({
+            'background':'#B15546',
+            'color':'#fff'
+        })
         $.ajax({ //jQuery中的ajax方法
             type: "POST",
             url: "shop/queryShopByLike.action",
