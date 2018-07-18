@@ -165,7 +165,7 @@ $(function () {
                         <span>${data[i].sold_count}</span>
                     </small>
                 </div>
-                    <button type="button" data="${data[i].food_id}" class="btn number btn-danger">加入订单</button>
+                    <button type="button" data="${data[i].food_id}" class="btn number btn-danger">加入购物车</button>
                 </div>
             </div>
                 `
@@ -176,18 +176,19 @@ $(function () {
                 $(item).click(function(){
                     $.ajax({ //jQuery中的ajax方法
                         type: "POST",
-                        url: "shop/showFood.action",
+                        url: "shop/addShopping.action",
                         data:{
                             shop_id:shopId,
                             food_id:data[index].food_id,
                             email:userEmail
                         },
                         dataType: "json",//数据类型是json
-                        success: function (data) {
+                        success: function (talk) {
+                            alert("加入购物车啦")
                             let html = 
                             `
                             <div class="col-xs-12 col-sm-12">
-                            <p class="col-xs-8 col-sm-9">${data[i].food_name}</p>
+                            <p class="col-xs-8 col-sm-9">${data[index].food_name}</p>
                             <div class="col-xs-3 col-sm-3">
                                 <div class="input-group">
                                     <span class="input-group-btn">
@@ -207,8 +208,8 @@ $(function () {
                         </div>
                             `
                         },
-                        error: function(data){
-                            console.log(data)
+                        error: function(talk){
+                            console.log(talk)
                         }
                     })
                 })
