@@ -165,12 +165,54 @@ $(function () {
                         <span>${data[i].sold_count}</span>
                     </small>
                 </div>
-                    <button type="button" class="btn  btn-danger">加入订单</button>
+                    <button type="button" data="${data[i].food_id}" class="btn number btn-danger">加入订单</button>
                 </div>
             </div>
                 `
                 $('#oFood').append(html)
             }
+
+            $('.number').each(function(index,item){
+                $(item).click(function(){
+                    $.ajax({ //jQuery中的ajax方法
+                        type: "POST",
+                        url: "shop/showFood.action",
+                        data:{
+                            shop_id:shopId,
+                            food_id:data[index].food_id,
+                            email:userEmail
+                        },
+                        dataType: "json",//数据类型是json
+                        success: function (data) {
+                            let html = 
+                            `
+                            <div class="col-xs-12 col-sm-12">
+                            <p class="col-xs-8 col-sm-9">${data[i].food_name}</p>
+                            <div class="col-xs-3 col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                        </button>
+                                    </span>
+                                    <span class="number">1</span>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                            `
+                        },
+                        error: function(data){
+                            console.log(data)
+                        }
+                    })
+                })
+            })
            
         },
         error: function (jqXHR) {//失败后执行的方法。
