@@ -207,6 +207,7 @@ $(function () {
                             </div>
                         </div>
                             `
+                            $('#food').append(html)
                         },
                         error: function(talk){
                             console.log(talk)
